@@ -13,7 +13,7 @@ import * as jQuery from 'jquery';
 export class S5Page implements OnInit,OnDestroy {
 
   bg="comparison_envy_w3"
-  title="Comparison"
+  title="Comparisons"
   mediaAudio=JSON.parse(localStorage.getItem("mediaAudio"))
   audioLink=this.mediaAudio+'/comparison/audios/comparison+1.2.mp3'
   colours=["btn_5circles_01 disabled"," btn_5circles_02 disabled"," btn_5circles_03"," btn_5circles_04 disabled"," btn_5circles_05 disabled"]
