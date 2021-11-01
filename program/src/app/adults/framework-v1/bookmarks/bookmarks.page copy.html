@@ -1,0 +1,97 @@
+<div class="wrapper">
+  <!-- header -->
+  <nav class="navbar navbar-default navbar-static-top cnavbar-default">  
+    <div class="row">
+      <div class="navbar-header nh flex_center_left p20px">
+        <button type="button" class="navbar-toggle collapsed unhide_ntbtn m0px p0 mtb0px r20px" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">       
+          <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/hamburger.svg" class="img-responsive" alt="">
+        </button>
+        <button type="button" class="navbar-toggle collapsed unhide_ntbtn m0px p0 mtb0px dpr30px" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">       
+          <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/alert_unfilled.svg" class="img-responsive" alt="">
+        </button>
+        <button type="button" class="navbar-toggle collapsed unhide_ntbtn m0px p0 mtb0px dpr60px" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">       
+          <!-- <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/bookmark_dashboard.svg" class="img-responsive" alt=""> -->
+          <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/bookmark_active.svg" class="img-responsive" alt="">
+        </button>
+  
+        <a class="cimg" href="#">
+          <h4 class="txt47 mtb0px">
+           HumanWisdom <span class="italic"></span>
+          </h4>
+        </a>
+      </div>
+  
+      <div id="navbar" class="navbar-collapse collapse hide_nav">      
+        <ul class="nav navbar-nav navbar-right">        
+          <ul class="nav navbar-nav cnavbar-nav mr-20px pb1rem">          
+            <li class="libr"><a href="">{{userName}}</a></li>                              
+            <li class="libr"><a href="">Help</a></li>
+            <li class=""><a routerLink="/onboarding/profile">My Profile</a></li>          
+            <li role="separator" class="divider"></li>
+          </ul>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">        
+          <ul class="nav navbar-nav cnavbar-nav">          
+            <li><a href="">About</a></li>          
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Programs <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="">Children</a></li>
+                <li><a href="">Teenager</a></li>
+                <li><a href="">Adults</a></li>
+                <li><a href="">Parents</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="">Community</a></li>
+            <li><a href="">Wisdom Survey</a></li>
+            <li><a href="">Wisdom Journal</a></li>
+            <li><a routerLink="/onboarding/add-to-cart">Subscribe</a></li>
+            <li><a href="">Testimonials</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- /header -->
+
+  <!-- page content -->
+  <div class="right_col pt_rightcol_01 ml0" role="main">				
+    <!-- Class -->
+    <div class="cw100p"> 
+      <div class="row drow center_flex safari_dblock">
+        <div class="col-md-6 col-sm-8 col-xs-12 p0">
+          <div class="x_panel p0">
+            <div class="x_content p0 bookmark_imgs" *ngIf="bookmarkList.length !== 0">                  
+              <div *ngFor="let item of allkeys; let i=index">                                
+                
+                <div class="row pb10px">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h4 class="txt113">
+                      {{item}}
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="row" *ngFor="let data of bookmarkList[i][item]">
+                  <div class="col-md-12 col-sm-12 col-xs-12 p0">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="{{urlPath + data['TPath']}}" (click)="imgClick(data)" alt="" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/Class --> 
+  </div>
+  <!-- /page content -->
+
+  <!-- footer  -->
+  <app-bottom-navigation></app-bottom-navigation>
+  <!-- /footer -->
+</div>
