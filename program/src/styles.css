@@ -7246,7 +7246,7 @@ span.right {
     clear: both;
     display: block;
     /* padding: 5px 0 0 0; */
-    padding: 1rem;
+    padding: 1rem 20px;
     position: fixed;
     width: 100%;
     /* background: #2A3F54; */
@@ -11781,7 +11781,8 @@ margin-top:0;
 
 .footer_index 
 {
-  width: 20%;
+  /* width: 20%; */
+  width: 25%;
   text-align: center;
 }
 
@@ -23019,4 +23020,10 @@ ul.dh_ul li
   line-height: 18px;
   text-align: center;
   color: #5D5D5D;
+}
+
+.cvideo_01
+{
+  width: auto;
+  max-height: 65vh;
 }
