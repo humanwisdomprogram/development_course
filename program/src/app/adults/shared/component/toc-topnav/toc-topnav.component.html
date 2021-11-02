@@ -77,9 +77,9 @@
                               <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                 <h4 class="txt188 mtb0px">
                                   Get a Wisdom Coach
-                                  <span class="fs_12px">
+                                  <!-- <span class="fs_12px">
                                     (Coming Soon)
-                                  </span>
+                                  </span> -->
                                 </h4>
                               </div>
                             </div>
@@ -95,9 +95,9 @@
                               <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                 <h4 class="txt188 mtb0px">
                                   My Progress
-                                  <span class="fs_12px">
+                                  <!-- <span class="fs_12px">
                                     (Coming Soon)
-                                  </span>
+                                  </span> -->
                                 </h4>
                               </div>
                             </div>
@@ -121,14 +121,14 @@
                           </a>
                         </li>
                 
-                        <li *ngIf="isloggedIn">
+                        <li *ngIf="isloggedIn && roleid === 8">
                           <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
+                              <!-- 
                               <div class="col-md-2 col-sm-2 col-xs-2">
                                 <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/dhamburger/04.svg" alt="" class="img-responsive">
                               </div>
-
-                              <!-- <div class="col-md-10 col-sm-10 col-xs-10 p0 flex_ai" *ngIf="roleid !== 8">
+                              <div class="col-md-10 col-sm-10 col-xs-10 p0 flex_ai" *ngIf="roleid !== 8">
                                 <h4 class="txt188 mtb0px mw75p">
                                   Redeem Wisdom Points
                                   <span class="fs_12px">
@@ -141,8 +141,12 @@
                                     9999
                                   </h6>
                                 </div>
-                              </div> -->
-                              <div class="col-md-10 col-sm-10 col-xs-10 p0" *ngIf="roleid === 8">
+                              </div> 
+                              -->
+                              <div class="col-md-2 col-sm-2 col-xs-2">
+                                <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/dhamburger/04.svg" alt="" class="img-responsive">
+                              </div>
+                              <div class="col-md-10 col-sm-10 col-xs-10 p0" >
                                 <h4 class="txt188 mtb0px" (click)="routeAffiliate()">
                                   Affiliate Revenue Report
                                 </h4>
@@ -228,9 +232,9 @@
                               <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                 <h4 class="txt188 mtb0px">
                                   Become a Coach
-                                  <span class="fs_12px">
+                                  <!-- <span class="fs_12px">
                                     (Coming Soon)
-                                  </span>
+                                  </span> -->
                                 </h4>
                               </div>
                             </div>
@@ -402,6 +406,23 @@
                                       <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                         <h4 class="txt188 mtb0px">
                                           Terms & Conditions
+                                        </h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a routerLink="/adults/framework-v1/privacy-policy" class="p0 b0px">
+                                  <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
+                                      <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/dhamburger/13.svg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="col-md-10 col-sm-10 col-xs-10 p0">
+                                        <h4 class="txt188 mtb0px">
+                                          Privacy Policy
                                         </h4>
                                       </div>
                                     </div>

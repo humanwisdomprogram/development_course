@@ -24,7 +24,7 @@ export class S33006Page implements OnInit {
   "module-id":""},
   {"no":3,
   "heading":"Noticing Thoughts",
-  "text":"We have many different breathing exercises you can practise on your own. These can be done anywhere and are excellent at helping your mind quieten, as well as giving you that little bit of space in a stressful situation for your intelligence to respond.  ",
+  "text":"In this exercise we write down every thought that arises in our thinking for 5-10 minutes. As we do so, the mind goes quiet.",
   "link":"/adults/noticing-thoughts",
   "linkText":"",
   "module-id":""},
