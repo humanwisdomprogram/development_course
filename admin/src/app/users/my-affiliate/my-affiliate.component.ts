@@ -42,7 +42,8 @@ export class MyAffiliateComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.getAffliateReferralReport(24);
+		this.id = this.route.snapshot.paramMap.get('id');
+		this.getAffliateReferralReport(this.id);
 	}
 
 

@@ -91,7 +91,7 @@ export class AffiliateComponent implements OnInit {
     if (this.editUser) value.UserID = this.editUser
     this._userService.addUser(value).subscribe((res: any) => {
       alert(`Affiliate ${this.editUser ? 'Updated' : 'Added'}`);
-      //window.location.reload();
+      window.location.reload();
     }, (err: any) => {
       console.log(err);
       alert(err.error.Message);
