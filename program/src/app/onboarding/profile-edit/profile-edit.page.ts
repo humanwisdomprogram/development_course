@@ -14,12 +14,14 @@ export class ProfileEditPage implements OnInit {
   fullname;
   email = 'test';
   userdetail = 'tset';
+  imageupload;
 
   constructor(private onboardingService : OnboardingService) {
     this.userId=JSON.parse(localStorage.getItem("userId"))
     this.onboardingService.getuser(this.userId).subscribe((res)=>{
       this.userdetail = res[0];
-      this.url = 'data:image/jpg;base64,' + this.userdetail['UserImage']
+      // this.url = 'data:image/jpg;base64,' + this.userdetail['UserImage']
+      this.url = this.userdetail['UserImagePath'].split('\\')[1] 
       this.email = this.userdetail['Email']
       this.fullname = this.userdetail['FName'] + ' ' + this.userdetail['LName']
     })
@@ -51,7 +53,7 @@ export class ProfileEditPage implements OnInit {
         }
         this.onboardingService.uploaderAvatar(obj).subscribe((r) => {
           if(r) {
-            this.url = reader.result; 
+            this.imageupload = reader.result; 
           }
         })
       }
