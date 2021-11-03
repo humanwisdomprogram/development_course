@@ -124,4 +124,8 @@ export class AdultsService {
   bookmark(data):Observable<any> {
     return this.http.get(this.path+ `/UserBookMarks/${data}`)
    }
+
+   decrypt(encrypt){
+    return this.http.post(this.path + `/decryptURL?EncryptedKey=${encrypt}`, {})
+  }
 }
