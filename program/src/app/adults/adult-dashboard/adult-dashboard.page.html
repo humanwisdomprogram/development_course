@@ -3,6 +3,26 @@
    <app-toc-topnav></app-toc-topnav>
   <!-- /header -->
 
+  <!-- google playstore -->
+  <div class="row p20px h60px center_flex mlr-10px_01 bg_01" id="div_google_playstore">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 plr0 flex_ai">
+      <div class="col-md-4 col-sm-5 col-xs-5">
+        <h4 class="txt83 mtb0px tleft">
+          Also available on
+        </h4>
+      </div>
+      <div class="col-md-7 col-sm-6 col-xs-6 p0 ml-15px">
+        <a>
+          <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/google_playstore.png" alt="" class="">
+        </a>
+      </div>
+      <div class="col-md-1 col-sm-1 col-xs-1 ml15px tright" id="google_playstore_hide">
+        <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/close_grey.svg" alt="" class="">
+      </div>
+    </div>
+  </div>
+  <!-- /google playstore -->
+
   <div class="prelative">
 
     <!-- <div class="row tcenter center_flex flex_align">
@@ -98,7 +118,7 @@
                 <div class="item">
                   <div class="prelative">
                     <div class="row tcenter center_flex flex_align">
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bg_black">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_black">
                         <h4 class="txt31 tcenter">
                           Introduction to HumanWisdom
                         </h4>
@@ -106,7 +126,7 @@
                     </div>
   
                     <div class="row center_flex vch">
-                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p0">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <video controls class="cvideo" class="embed-responsive-item img-responsive object_fit w100" poster="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/images/tiles/dashboard/feature/feature_title_01.jpg">
                           <!-- <source src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/adult_dashboard/What+are+the+benefits+of+wisdom.mp4" type="video/mp4"> -->
                           <source src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/adult_dashboard/intro_draft3.mp4" type="video/mp4">
@@ -175,26 +195,28 @@
                 <!-- /unsubscribed -->
 
                 <!-- subscribed -->
-                <div class="row p10px mb27px center_flex mlr-10px_01 bg_01" *ngIf="Subscriber === '1'">
+                <div class="row p10px mb27px center_flex mlr-10px_01 bg_01" *ngIf="Subscriber === '1'" id="div_user_guide">
                   <div class="col-md-12 col-sm-12 col-xs-12 plr0 flex_ai">
                     <div class="col-md-2 col-sm-2 col-xs-2">
                       <div class="prelative center_flex">
-                        <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/wisdom_points_circle.svg" alt="" class="prelative">
-                        <h6 class="txt142 wpts_count">
+                        <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user_guide.svg" alt="" class="prelative">
+                        <!-- <h6 class="txt142 wpts_count">
                           {{points}}
-                        </h6>
+                        </h6> -->
                       </div>
                     </div>
-                    <div class="col-md-5 col-sm-5 col-xs-5">
-                      <h4 class="txt207 mtb0px">
-                        Wisdom Points
+                    <div class="col-md-5 col-sm-5 col-xs-5 p0">
+                      <a (click)="routeGuide(0)">
+                        <h4 class="txt86 mtb0px">
+                          User Guide
+                        </h4>
+                      </a>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5" id="user_guide_hide">
+                      <h4 class="txt120 mtb0px tright">
+                        Remove
                       </h4>
                     </div>
-                    <!-- <div class="col-md-5 col-sm-5 col-xs-5">
-                      <h4 class="txt208 underline mtb0px tright">
-                        Redeem Now
-                      </h4>
-                    </div> -->
                   </div>
                 </div>
                 <!-- /subscribed -->
@@ -209,7 +231,7 @@
                 </div> -->
 
                 <!-- section 1 -->
-                <div class="row">
+                <div class="row on_user_guide_pt">
                   <div class="col-md-12 col-sm-12 col-xs-12 odiv p0">
 
                     <div class="col-md-2 col-sm-4 col-xs-4">
