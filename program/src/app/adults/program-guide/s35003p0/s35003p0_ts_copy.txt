@@ -1,9 +1,7 @@
-import { Component,OnInit,Input,Output,ViewChild,AfterViewInit,EventEmitter,OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {DomSanitizer,SafeResourceUrl,} from '@angular/platform-browser';
-import { NgxCaptureService } from 'ngx-capture';
-import {AdultsService} from "../../adults.service";
-import {Location } from '@angular/common';
+import { Component, OnInit,OnDestroy } from '@angular/core';
+import {AdultsService} from "../../adults.service"
+import { Router } from '@angular/router';
+import {Location } from '@angular/common'
 
 @Component({
   selector: 'app-s35003p0',
@@ -35,17 +33,8 @@ export class S35003p0Page implements OnInit,OnDestroy {
   avDuration:any
 
   bookmarkList=JSON.parse(localStorage.getItem("bookmarkList"))
-
-  // getcurrenttime function changes
-  currentTime:any
-  @Output() sendAvDuration = new EventEmitter<string>();
-  loginResponse=JSON.parse(localStorage.getItem("loginResponse"))
-  scrId:any
-  freeScreens=JSON.parse(localStorage.getItem("freeScreens"))
-  mediaPercent:any
-  pauseTime:any
-  @ViewChild('video') video;
-  // /getcurrenttime function changes
+  
+  
  
   constructor(
     private router: Router,
@@ -74,32 +63,6 @@ ngOnInit() {
  
     
   }
-  
-  // getcurrenttime function changes
-  getCurrentTime(data){
-  
-    this.currentTime = data.target.currentTime;
-    this.sendAvDuration.emit(JSON.parse(data.target.currentTime))
-    
-    if (this.loginResponse.Subscriber!=1)
-    {
-      if(!this.freeScreens.includes(parseInt(this.scrId)))
-      {
-          this.pauseTime=((this.mediaPercent/100)*data.target.duration)
-          if(this.currentTime>this.pauseTime){
-              this.video.nativeElement.pause()
-              window.alert('You Have Reached Free Limit')
-            }
-      }
-      else{
-        console.log("free screen")
-      }
-
-    }
-    
-  }
-  // /getcurrenttime function changes
-  
   receiveBookmark(e)
   {
     console.log(e)
