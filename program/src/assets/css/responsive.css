@@ -144,6 +144,11 @@
         background: #000000;
         padding: 0;
     }
+
+    .navbar_01 
+    {
+        top: 7%;
+    }
 }
 
 @media (min-width: 768px)
@@ -282,6 +287,11 @@
         background: transparent;
         padding: 0 5px;
     }
+
+    .navbar_01 
+    {
+        top: 5.5%;
+    }
 }
 
 @media (min-width: 1024px)
@@ -327,6 +337,11 @@
         background: transparent;
         padding: 0 10px;
     }
+
+    .navbar_01 
+    {
+        top: 4%;
+    }
 }
 
 @media (min-width: 1025px)
@@ -367,6 +382,11 @@
     {
         top: 9.5%;
         bottom: 9%;
+    }
+
+    .navbar_01 
+    {
+        top: 8%;
     }
 }
 
