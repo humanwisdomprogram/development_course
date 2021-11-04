@@ -135,6 +135,46 @@
       $('#modal_cookie').modal('show');
     });
     </script> -->
+
+    <!-- hide google playstore div -->
+    <script>
+    $(document).on('click', '#google_playstore_hide', function()
+    {
+      $("#div_google_playstore").fadeOut(500);
+      $(".navbar-static-top").attr("style", "top: 0 !important");
+      $(".pt3_2rem").attr("style", "padding-top: 5rem");
+    });
+    </script>
+    <!-- /hide google playstore div -->
+
+    <!-- hide userguide div -->
+    <script>
+    $(document).on('click', '#user_guide_hide', function()
+    {
+      $("#div_user_guide").hide();
+      $(".on_user_guide_pt").attr("style", "padding-top: 1rem");
+    });
+    </script>
+    <!-- /hide userguide div -->
+
+    <!--
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) 
+          { 
+            $('#div_google_playstore').fadeOut(500);
+            $(".navbar-static-top").attr("style", "top: 0");
+          } 
+          else 
+          {
+            $('#div_google_playstore').fadeIn(500);
+            $(".navbar-static-top").addClass("navbar_01");
+          }
+        });
+      });
+      </script>
+      -->
     
     <noscript>Please enable JavaScript to continue using this application.</noscript>
   </body>

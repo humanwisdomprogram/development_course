@@ -490,7 +490,7 @@ a:hover, a:focus {
 }
 .navbar-static-top {
   position: fixed;
-  top: 0;
+  top: 7%;
   width: 100%;
 }
 .sidebar-header {
@@ -20659,7 +20659,8 @@ and (orientation : portrait)
 
 .pt3_2rem 
 {
-  padding-top: 5.9rem;
+  /* padding-top: 5.9rem; */
+  padding-top: 11rem;
 }
 
 /* @media (min-width: 768px)
@@ -23026,4 +23027,25 @@ ul.dh_ul li
 {
   width: auto;
   max-height: 65vh;
+}
+
+.ml-15px 
+{
+  margin-left: -15px;
+}
+
+.ml15px 
+{
+  margin-left: 15px
+}
+
+#div_google_playstore
+{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 99;
 }
