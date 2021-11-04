@@ -60,6 +60,12 @@ export class LoginSignupPage implements OnInit {
   get emailvalid(){
     return this.registrationForm.get('email')
   }
+  get passwordvalid(){
+    return this.registrationForm.get('password')
+  }
+  get confirmpasswordvalid(){
+    return this.registrationForm.get('confirmPassword')
+  }
   // registrationForm=new FormGroup({
   //   firstName:new FormControl(''),
   //   lastName:new FormControl(''),
@@ -70,8 +76,8 @@ export class LoginSignupPage implements OnInit {
   registrationForm=this.fb.group({
     fullname:['',[Validators.required,Validators.minLength(3)]],
     email:['',[Validators.required, Validators.email]],
-    password:['',[Validators.required, Validators.minLength(6)]],
-    confirmPassword:['', [Validators.required, Validators.minLength(6)]],
+    password:['',[Validators.required, Validators.minLength(3)]],
+    confirmPassword:['', [Validators.required, Validators.minLength(3)]],
   },{validator: this.PasswordValidator})
 
   
@@ -101,13 +107,15 @@ export class LoginSignupPage implements OnInit {
     }
 
   ngOnInit() {
-    if(localStorage.getItem("emailCode") === 'T') {
-      let userid = localStorage.getItem("userIdCode")
-      this.service.verifyUser(userid)
-      .subscribe(res=>{
-        console.log(res)
-      })
-    }
+    setTimeout(() => {
+      if(localStorage.getItem("emailCode") === 'T') {
+        let userid = localStorage.getItem("userIdCode")
+        this.service.verifyUser(userid)
+        .subscribe(res=>{
+          console.log(res)
+        })
+      }
+    }, 4000)
   }
   forbiddenNameValidator(control: AbstractControl):{[key: string]:any} | null
    {

@@ -67,11 +67,10 @@ ngOnInit() {
   {
     if(!this.freeScreens.includes(parseInt(this.scrId)))
       {
-        if(this.t)
-        {
+        
           this.interval=setInterval(()=>this.checkPauseTime(), 1000);
 
-        }
+        
            
       }
   }
