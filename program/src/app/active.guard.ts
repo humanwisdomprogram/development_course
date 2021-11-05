@@ -38,7 +38,7 @@ export class ActiveGuard implements CanActivate, OnInit {
       return true;
     } else {
       // window.alert('You Have Reached Free Limit')
-      this.router.navigate(['/adults/framework-v1/free-limit'])
+      this.router.navigate(['/onboarding/free-limit'])
       return false
     }
 
