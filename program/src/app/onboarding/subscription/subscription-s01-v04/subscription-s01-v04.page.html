@@ -102,13 +102,13 @@
                 </div>
               </div>
 
-              <div class="row pt30px">
-                <div class="col-md-12 col-sm-12 col-xs-12 tcenter" *ngIf="!enableLoginSubscriber && !isSubscribe">
+              <div class="row pt30px center_flex">
+                <div class="col-md-8 col-sm-12 col-xs-12 tcenter" *ngIf="!enableLoginSubscriber && !isSubscribe">
                   <a>
                     <button type="button" class="btn btn-success mb0 btn_subscribe_code"  data-toggle="modal" data-target="#activate_subscription_01">I already have a Subscription Code</button>
                   </a>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12 tcenter" *ngIf="enableLoginSubscriber && !isSubscribe">
+                <div class="col-md-8 col-sm-12 col-xs-12 tcenter" *ngIf="enableLoginSubscriber && !isSubscribe">
                   <a>
                     <button type="button" class="btn btn-success mb0 btn_subscribe_code"  data-toggle="modal" (click)="getActivationCode()">I already have a Subscription Code</button>
                   </a>
@@ -135,7 +135,7 @@
               <ng-container *ngFor="let c of cartList">
                 <div class="row mt10px">
                   <div class="col-md-12 col-sm-12 col-xs-12 center_flex">
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 center_flex">
+                    <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 center_flex">
                       <div id="annual_monthly" class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary btn_annually" data-toggle-class="btn-primary" (click)="selectPlan('Annual',c.ProgID)" *ngIf="c.selectedSubscription === 'Annual' || c.selectedSubscription === 'null' || cartitemList.length === 0" data-toggle-passive-class="btn-default">
                           <input type="radio" name="annual_monthly" value="annual"> &nbsp; Annual &nbsp;
@@ -155,8 +155,8 @@
                     </h6>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-12 col-sm-12 col-xs-12 tcenter">                    
+                <div class="row center_flex">
+                  <div class="col-md-8 col-sm-12 col-xs-12 tcenter">                      
                     <a>
                       <button type="button" class="btn btn-warning mb0 btn_add_cart w100" data-toggle="modal" data-target="#modal_recipient">Add to Cart</button>
                     </a>
@@ -176,7 +176,7 @@
               
 
               <div class="row center_flex mt28px mb26px">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
                   <h6 class="txt120 mtb0px tcenter">
                     Add more if you wish to gift this program to others
                   </h6>
