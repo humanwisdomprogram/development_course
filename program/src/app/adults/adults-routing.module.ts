@@ -248,13 +248,12 @@ const routes: Routes = [
   {
     path: 'cookie-policy',
     loadChildren: () => import('./framework-v1/cookie-policy/cookie-policy.module').then( m => m.CookiePolicyPageModule)
-  },   
-
+  },
   {
     path: 'tree-planting-program',
     loadChildren: () => import('./framework-v1/tree-planting-program/tree-planting-program.module').then( m => m.TreePlantingProgramPageModule)
-  },   
-   
+  },
+  
 ];
 
 @NgModule({
