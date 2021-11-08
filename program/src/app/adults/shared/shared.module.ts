@@ -65,7 +65,7 @@ import { AudioDiagramComponent } from './component/audio-diagram/audio-diagram.c
 import { TopnavComponent } from 'src/app/onboarding/shared/component/topnav/topnav.component';
 import { TocHeaderComponent } from '../shared/component/toc-header/toc-header.component';
 import { TocTopnavComponent } from '../shared/component/toc-topnav/toc-topnav.component';
-
+import { TnHwpProjectComponent } from './component/tn-hwp-project/tn-hwp-project.component';
 @NgModule({
   declarations: [
     TnCrossComponent,
@@ -125,7 +125,8 @@ import { TocTopnavComponent } from '../shared/component/toc-topnav/toc-topnav.co
     AudioDiagramComponent,
     TopnavComponent,
     TocHeaderComponent,
-    TocTopnavComponent
+    TocTopnavComponent,
+    TnHwpProjectComponent
   ],
   imports: [
     CommonModule,
@@ -207,7 +208,8 @@ import { TocTopnavComponent } from '../shared/component/toc-topnav/toc-topnav.co
     AudioDiagramComponent,
     TopnavComponent,
     TocHeaderComponent,
-    TocTopnavComponent
+    TocTopnavComponent,
+    TnHwpProjectComponent
   ]
 })
 export class SharedModule { }

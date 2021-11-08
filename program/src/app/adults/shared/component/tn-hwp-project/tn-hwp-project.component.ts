@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-toc-topnav',
-  templateUrl: './toc-topnav.component.html',
-  styleUrls: ['./toc-topnav.component.scss'],
+  selector: 'HumanWisdom-tn-hwp-project',
+  templateUrl: './tn-hwp-project.component.html',
+  styleUrls: ['./tn-hwp-project.component.scss'],
 })
-export class TocTopnavComponent implements OnInit {
+export class TnHwpProjectComponent implements OnInit {
   isloggedIn = false;
   name = ''
   roleid = 0
