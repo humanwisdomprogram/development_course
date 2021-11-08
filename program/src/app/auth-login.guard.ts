@@ -29,7 +29,8 @@ export class authLoginGuard implements CanActivate, OnInit {
     let rem = localStorage.getItem("remember")
     if (res === null || res === 'F' || rem === 'F') {
       if(m[1] !== undefined) {
-        this.service.decrypt(m[1]).subscribe((res: any) => {
+        m = m[1].replace('=', '')
+        this.service.decrypt(m).subscribe((res: any) => {
           if(res) {
             let s = res.split('=')[1]
             localStorage.setItem("userIdCode", s)
