@@ -13,11 +13,11 @@ import {SharedModule} from '../../shared/shared.module';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    FormsModule, 
     IonicModule,
     HwpProjectPageRoutingModule,
     SharedModule
   ],
   declarations: [HwpProjectPage]
 })
-export class HwpProjectPageModule {}
+export class HwpProjectPageModule{}
