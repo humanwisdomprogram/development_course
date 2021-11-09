@@ -154,6 +154,11 @@
     {
     display: none;
     }
+
+    .img_google_playstore 
+    {
+        max-width: 65%;
+    }
 }
 
 @media (min-width: 768px)
@@ -246,6 +251,11 @@
     {
         margin-right: 0px;
         margin-left: 0px;
+    }
+
+    .img_google_playstore 
+    {
+        max-width: 55%;
     }
 }
 
