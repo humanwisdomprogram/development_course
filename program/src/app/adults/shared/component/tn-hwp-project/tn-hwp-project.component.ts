@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'HumanWisdom-tn-hwp-project',
+  selector: 'app-tn-hwp-project',
   templateUrl: './tn-hwp-project.component.html',
   styleUrls: ['./tn-hwp-project.component.scss'],
 })
