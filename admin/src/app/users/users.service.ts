@@ -313,6 +313,10 @@ path="https://www.humanwisdom.info/api"
     return this.http.get(this.path + `/GetAffliateCommision_Admin`)
   }
 
+  getAffliateCommisionById(id){
+    return this.http.get(this.path + `/GetAffliateCommision/${id}`)
+  }
+
   setAffliateCommision(Id:any): Observable<any> {
     return this.http.put(this.path + `/SetCommisionPaid`, Id)
   }
