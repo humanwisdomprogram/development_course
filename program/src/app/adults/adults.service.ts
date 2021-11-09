@@ -12,9 +12,9 @@ import {
 })
 export class AdultsService {
   // path="http://18.132.47.231/api";
-  // path="https://www.humanwisdom.info/api"
+   path="https://www.humanwisdom.info/api"
   // path="http://ec2-18-132-47-231.eu-west-2.compute.amazonaws.com:88/api"
-  path="https://staging.humanwisdom.info/api"
+  // path="https://staging.humanwisdom.info/api"
 
 
   constructor( private http: HttpClient,handler: HttpBackend) { }
@@ -52,7 +52,7 @@ export class AdultsService {
 
   getDailyQuestion(data:any):Observable<any>{
    
-    return this.http.get('https://staging.humanwisdom.info/api'+`/userDailyQuestion/${data}`)
+    return this.http.get(this.path+`/userDailyQuestion/${data}`)
   }
   addDailyQuestion(data:any):Observable<any>{
     return this.http.post(this.path+'/AddUserReflection',data)

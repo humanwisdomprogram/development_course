@@ -8,16 +8,16 @@ import { HwpProjectPageRoutingModule } from './hwp-project-routing.module';
 
 import { HwpProjectPage } from './hwp-project.page';
 
-import {SharedModule} from '../../shared/shared.module'
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    FormsModule, 
     IonicModule,
     HwpProjectPageRoutingModule,
     SharedModule
   ],
   declarations: [HwpProjectPage]
 })
-export class HwpProjectPageModule {}
+export class HwpProjectPageModule{}

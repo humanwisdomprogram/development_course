@@ -14258,9 +14258,10 @@ input[type="number"] {
   padding-bottom: 3rem;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+/* ::-webkit-scrollbar 
+{
+  display: none;
+} */
 
 @media (max-width: 375px)
 {  
@@ -23048,4 +23049,9 @@ ul.dh_ul li
   left: 0;
   margin: 0 auto;
   z-index: 99;
+}
+
+.mr10px 
+{
+  margin-right: 10px;
 }
