@@ -52,7 +52,7 @@ export class AdultsService {
 
   getDailyQuestion(data:any):Observable<any>{
    
-    return this.http.get('https://staging.humanwisdom.info/api'+`/userDailyQuestion/${data}`)
+    return this.http.get(this.path+`/userDailyQuestion/${data}`)
   }
   addDailyQuestion(data:any):Observable<any>{
     return this.http.post(this.path+'/AddUserReflection',data)
