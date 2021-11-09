@@ -86,8 +86,8 @@ export class ViewAffiliateComponent implements OnInit {
     this.router.navigate([`users/my-affiliate/${id}`])
   }
 
-  routeRevenueAffiliate(){
-  	this.router.navigate([`users/affiliate-all-users`])
+  routeRevenueAffiliate(id){
+  	this.router.navigate([`users/affiliate-all-users/${id}`])
   }
 
 }
