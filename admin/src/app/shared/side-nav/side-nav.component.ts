@@ -220,7 +220,7 @@ export class SideNavComponent implements OnInit {
   }
 
   routeAffiliateAllUser(){
-    this.router.navigate(['users/affiliate-all-users'])
+    this.router.navigate(['users/affiliate-all-users/0'])
   }
 
   routeViewAffiliate(){
