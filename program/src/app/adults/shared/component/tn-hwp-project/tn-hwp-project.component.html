@@ -52,11 +52,11 @@
                     <div class="m-menu__header">
                       <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 flex_ai">
-                          <div class="col-md-3 col-sm-4 col-xs-4 p0">
-                            <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user/profile_01_d.svg" alt="" class="img-responsive">
+                          <div class="col-md-3 col-sm-3 col-xs-3 p0">
+                            <img src="{{url === '' ? 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user/profile_default.svg'  : 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/images/tiles/UsersAvatar/' + url}}" alt="" class="img-responsive img_profile">
                             <!-- <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/footer/dashboard/profile_active.svg" alt="" class="img-responsive w100"> -->
                           </div>
-                          <div class="col-md-9 col-sm-8 col-xs-8 ws_nowrap">
+                          <div class="col-md-9 col-sm-9 col-xs-9 ws_nowrap">
                             <h4 class="txt187 mtb0px">
                               {{name}}
                             </h4>
@@ -68,7 +68,7 @@
                       </div>
                     </div>
                     <ul class="dh_ul">
-                      <li>
+                      <!-- <li>
                         <div class="row">
                           <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
                             <div class="col-md-2 col-sm-2 col-xs-2">
@@ -77,14 +77,11 @@
                             <div class="col-md-10 col-sm-10 col-xs-10 p0">
                               <h4 class="txt188 mtb0px">
                                 Get a Wisdom Coach
-                                <!-- <span class="fs_12px">
-                                  (Coming Soon)
-                                </span> -->
                               </h4>
                             </div>
                           </div>
                         </div>
-                      </li>
+                      </li> -->
               
                       <li *ngIf="isloggedIn">
                         <div class="row">
@@ -223,7 +220,7 @@
                         </a>
                       </li>
               
-                      <li>
+                      <!-- <li>
                         <div class="row">
                           <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
                             <div class="col-md-2 col-sm-2 col-xs-2">
@@ -232,14 +229,11 @@
                             <div class="col-md-10 col-sm-10 col-xs-10 p0">
                               <h4 class="txt188 mtb0px">
                                 Become a Coach
-                                <!-- <span class="fs_12px">
-                                  (Coming Soon)
-                                </span> -->
                               </h4>
                             </div>
                           </div>
                         </div>
-                      </li>
+                      </li> -->
               
                       <li>
                         <a href="https://www.humanenquiry.org/aboutBook.php" class="p0 b0px">

@@ -173,35 +173,12 @@
             <div class="x_content p0 mt0px">
               <form>
 
-                <!-- unsubscribed -->
-                <div class="row p0 mt29px mb27px center_flex" *ngIf="Subscriber === '0'">
-                  <div class="col-md-9 col-sm-9 col-xs-9 plr0" >
-                    <a>
-                      <button type="button" (click)="subscribenow()" class="btn btn-warning mb0 btn_subscribe_now w100" data-dismiss="modal">
-                        Subscribe now
-                      </button>
-                    </a>
-                  </div>
-                  
-                  <div class="col-md-3 col-sm-3 col-xs-3 pr0px">
-                    <a (click)="routeGuide(0)">
-                      <button type="button" class="btn btn-warning mb0 btn_user_guide w100" data-dismiss="modal">
-                        User Guide
-                      </button>
-                    </a>
-                  </div>
-                </div>
-                <!-- /unsubscribed -->
-
-                <!-- subscribed -->
-                <div class="row p10px mb27px center_flex mlr-10px_01 bg_01" *ngIf="Subscriber === '1'" id="div_user_guide">
+                <!-- for all the user-guest, subscribed, unsubscribed -->
+                <div class="row p10px mb27px center_flex mlr-10px_01 bg_01" id="div_user_guide">
                   <div class="col-md-12 col-sm-12 col-xs-12 plr0 flex_ai">
                     <div class="col-md-2 col-sm-2 col-xs-2">
                       <div class="prelative center_flex">
                         <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user_guide.svg" alt="" class="prelative">
-                        <!-- <h6 class="txt142 wpts_count">
-                          {{points}}
-                        </h6> -->
                       </div>
                     </div>
                     <div class="col-md-5 col-sm-5 col-xs-5 p0">
@@ -218,6 +195,50 @@
                     </div>
                   </div>
                 </div>
+                <!-- /for all the user-guest, subscribed, unsubscribed -->
+
+                <!-- unsubscribed -->
+                <!-- <div class="row p0 mt29px mb27px center_flex" *ngIf="Subscriber === '0'">
+                  <div class="col-md-9 col-sm-9 col-xs-9 plr0" >
+                    <a>
+                      <button type="button" (click)="subscribenow()" class="btn btn-warning mb0 btn_subscribe_now w100" data-dismiss="modal">
+                        Subscribe now
+                      </button>
+                    </a>
+                  </div>
+                  
+                  <div class="col-md-3 col-sm-3 col-xs-3 pr0px">
+                    <a (click)="routeGuide(0)">
+                      <button type="button" class="btn btn-warning mb0 btn_user_guide w100" data-dismiss="modal">
+                        User Guide
+                      </button>
+                    </a>
+                  </div>
+                </div> -->
+                <!-- /unsubscribed -->
+
+                <!-- subscribed -->
+                <!-- <div class="row p10px mb27px center_flex mlr-10px_01 bg_01" *ngIf="Subscriber === '1'" id="div_user_guide">
+                  <div class="col-md-12 col-sm-12 col-xs-12 plr0 flex_ai">
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                      <div class="prelative center_flex">
+                        <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user_guide.svg" alt="" class="prelative">
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5 p0">
+                      <a (click)="routeGuide(0)">
+                        <h4 class="txt86 mtb0px">
+                          User Guide
+                        </h4>
+                      </a>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-5" id="user_guide_hide">
+                      <h4 class="txt120 mtb0px tright">
+                        Remove
+                      </h4>
+                    </div>
+                  </div>
+                </div> -->
                 <!-- /subscribed -->
 
                 <!-- <div class="row  pt20px"  *ngIf="isSubscribe">
