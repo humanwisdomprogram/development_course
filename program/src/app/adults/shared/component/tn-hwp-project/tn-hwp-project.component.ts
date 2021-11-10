@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { OnboardingService } from 'src/app/onboarding/onboarding.service';
 @Component({
   selector: 'app-tn-hwp-project',
   templateUrl: './tn-hwp-project.component.html',
@@ -10,14 +10,20 @@ export class TnHwpProjectComponent implements OnInit {
   isloggedIn = false;
   name = ''
   roleid = 0
+  url = '';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private Onboardingservice: OnboardingService) {
     this.roleid = JSON.parse(localStorage.getItem('RoleID'));
     let userid = localStorage.getItem('isloggedin');
     this.name = localStorage.getItem('name');
     if(userid === 'T') {
       this.isloggedIn = true
     }
+    let userId=JSON.parse(localStorage.getItem("userId"))
+    this.Onboardingservice.getuser(userId).subscribe((res)=>{
+      let userdetail = res[0];
+      this.url = userdetail['UserImagePath'].split('\\')[1] 
+    })
    }
 
   ngOnInit() {

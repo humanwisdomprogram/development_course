@@ -23055,3 +23055,9 @@ ul.dh_ul li
 {
   margin-right: 10px;
 }
+
+.img_profile 
+{
+  border-radius: 50%;
+  height: 5rem;
+}
