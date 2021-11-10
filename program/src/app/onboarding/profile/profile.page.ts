@@ -24,12 +24,17 @@ export class ProfilePage implements OnInit {
   email;
   paymentDetail;
   RoleID = 0
+  url = ''
 
   constructor(private router: Router, private Onboardingservice: OnboardingService) {
     let userId=JSON.parse(localStorage.getItem("userId"))
     this.RoleID=JSON.parse(localStorage.getItem("RoleID"))
      this.Onboardingservice.getpaymentdetail(userId).subscribe((res) => {
        this.paymentDetail = res[0]
+     })
+     this.Onboardingservice.getuser(userId).subscribe((res)=>{
+       let userdetail = res[0];
+       this.url = userdetail['UserImagePath'].split('\\')[1] 
      })
    }
 
