@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from "jquery";
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-top-nav',
@@ -8,8 +10,13 @@ import * as $ from "jquery";
 })
 export class TopNavComponent implements OnInit {
   userName=JSON.parse(localStorage.getItem("userName"))
+  token = JSON.parse(localStorage.getItem("token"))
 
-  constructor() { }
+  constructor(private router: Router) { 
+    if(this.token == null || this.token == ""){
+      this.router.navigate(['login'])
+    }
+  }
   toggleClicked(event) {
     var target = event.srcElement.id;
     var body = $("body");
@@ -38,5 +45,6 @@ export class TopNavComponent implements OnInit {
 
   logout(){
     localStorage.clear();
+    this.router.navigate(['login'])
   }
 }
