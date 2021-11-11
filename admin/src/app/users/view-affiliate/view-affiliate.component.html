@@ -119,7 +119,7 @@
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let affiliate of affiliates; let i = index;">
-                                        <td><a (click)="routeRevenueAffiliate(affiliate.AffliateParentID)">{{affiliate.AffName}}</a></td>
+                                        <td><a (click)="routeRevenueAffiliate(affiliate.AffiliateID)">{{affiliate.AffName}}</a></td>
                                         <td>{{affiliate.DOJ}}</td>
                                         <td>{{affiliate.CouponCode}}</td>
                                         <td>{{affiliate.Level1}}</td>
@@ -129,8 +129,8 @@
                                         <td>{{affiliate.TotCommEarned}}</td>
                                         <td>{{affiliate.TotPaidComm}}</td>
                                         <td>{{affiliate.TotUnPaidComm}}</td>
-                                        <td> <a (click)="routeMyAffiliate(affiliate.AffliateParentID)">{{affiliate.ChildrenCnt}}</a></td>
-                                        <td> <a (click)="routeMyAffiliate(affiliate.AffliateParentID)">{{affiliate.grandChildrenCnt}}</a></td>
+                                        <td> <a (click)="routeMyAffiliate(affiliate.AffiliateID)">{{affiliate.ChildrenCnt}}</a></td>
+                                        <td> <a (click)="routeMyAffiliate(affiliate.AffiliateID)">{{affiliate.grandChildrenCnt}}</a></td>
                                     </tr>             
                                 </tbody>
                             </table>
