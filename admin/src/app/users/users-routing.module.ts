@@ -60,7 +60,7 @@ const routes: Routes = [
   component: AffiliateComponent
 },
 {
-  path: "affiliate-all-users",
+  path: "affiliate-all-users/:id",
   component: AffiliateAllUsersComponent
 },
 {

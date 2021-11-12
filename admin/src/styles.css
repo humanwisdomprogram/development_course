@@ -10207,3 +10207,39 @@ label.filter_label
 {
   text-decoration: underline;
 }
+
+.scrollbar 
+{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar 
+{
+  width: 10px;
+}
+
+/* track */
+.scrollbar::-webkit-scrollbar-track 
+{
+  background: rgba(255,255,255,0.25); 
+}
+
+/* handle */
+.scrollbar::-webkit-scrollbar-thumb 
+{
+  background: #4491A5; 
+  /* border-radius: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box; */
+}
+
+/* handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:hover 
+{
+  background: #4491A5;
+  /* border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box; */
+}

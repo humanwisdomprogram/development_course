@@ -5,7 +5,7 @@
     <nav class="flex_ai">
       <ul class="nav navbar-nav navbar-right cnav navleft w20p no_bg">
         <li class="">
-          <a class="cuser-profile dropdown-toggle p0" data-toggle="dropdown" aria-expanded="false">
+          <a class="cuser-profile dropdown-toggle p0" data-toggle="dropdown" aria-expanded="false" routerLink="/onboarding/user-profile">
             <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/close_white.svg" alt=""
               class="p0">
           </a>
@@ -47,8 +47,8 @@
               <div class="row forum_pt20px center_flex">
                 <div class="col-md-12 col-sm-12 col-xs-12 center_flex w50p">
                   <div class="opaque_border_outer">
-                    <img src="{{url === undefined ? 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user/profile_01_a.svg' : url}}"
-                      alt="" class="p0 opaque_border_inner img-responsive">
+                    <img src="{{imageupload !== undefined ? imageupload : url === undefined ? 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user/profile_default.svg' : 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/images/tiles/UsersAvatar/' + url}}"
+                      alt="" class="p0 opaque_border_inner img-responsive img_profile_01">
                   </div>
                 </div>
               </div>

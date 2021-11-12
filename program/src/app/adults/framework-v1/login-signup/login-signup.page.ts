@@ -102,12 +102,14 @@ export class LoginSignupPage implements OnInit {
 
   ngOnInit() {
     if(localStorage.getItem("emailCode") === 'T') {
-      let userid = localStorage.getItem("userIdCode")
+      setTimeout(() => {
+        let userid = localStorage.getItem("userIdCode")
       this.service.verifyUser(userid)
       .subscribe(res=>{
         localStorage.setItem("emailCode", 'F');
         console.log(res)
       })
+      }, 2000)
     }
   }
   forbiddenNameValidator(control: AbstractControl):{[key: string]:any} | null

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../users.service';
-import { ActivatedRoute } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -30,13 +30,9 @@ export class ViewAffiliateComponent implements OnInit {
 	PaymentPending: any = 0.0;
 
 
-
-
-
-
 	constructor(
 		public _userservice: UsersService,
-		private route: ActivatedRoute
+		private router: Router
 	) {
 		this.intializeForm();
 	}
@@ -86,5 +82,12 @@ export class ViewAffiliateComponent implements OnInit {
   }
 
 
+  routeMyAffiliate(id){
+    this.router.navigate([`users/my-affiliate/${id}`])
+  }
+
+  routeRevenueAffiliate(id){
+  	this.router.navigate([`users/affiliate-all-users/${id}`])
+  }
 
 }

@@ -21,6 +21,7 @@ export class AffiliateS01AComponent implements OnInit {
 	searchedToDate: any = "2030-01-01";
 	id: any = 0;
 	resUserByID: any = [];
+	affiliateName: any = "";
 
 
 
@@ -54,11 +55,10 @@ export class AffiliateS01AComponent implements OnInit {
 
   getAffliateCommision(id) {
 		console.log("id1: ", id);
-
 			this._frameworkService.getAffliateCommision(id).subscribe((res: any) => {
 			this.affiliates = res;
 			this.getAffliateCommisionApiRes = res;
-			console.log(this.affiliates);
+			console.log("Ubed: ",this.affiliates);
 		}, (err: any) => {
 			console.log(err);
 		})
@@ -72,7 +72,8 @@ export class AffiliateS01AComponent implements OnInit {
       if (res.length) {
         this.affiliateParentData.patchValue(res[0]);
         this.resUserByID = res[0];
-        console.log(this.resUserByID);
+        this.affiliateName = this.resUserByID.FName + " " + this.resUserByID.LName;
+        console.log(this.resUserByID.FName + " " + this.resUserByID.LName);
       }
     }, (err: any) => {
       console.log(err);

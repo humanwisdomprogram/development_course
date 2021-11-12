@@ -1,17 +1,17 @@
-<nav class="navbar navbar-default navbar-static-top cnavbar-default">
+<nav class="navbar navbar-default navbar-static-top cnavbar-default navbar_01">
 
     <div class="row">
 
       <div class="navbar-header nh p0 onscrollbg">
 
         <div class="row center_flex">
-          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 p0 center_flex mtb-2px ">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 p0 center_flex">
             <div class="col-md-8 col-sm-8 col-xs-7 p20px">
               <a class="cimg_01" href="#">
                 <!-- <h4 class="txt47 mtb0px">
                  HumanWisdom <span class="italic"></span>
                 </h4> -->
-                <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/logo/hwp_beta_logo.svg" class="img-responsive" alt="">
+                <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/logo/hwp_logo.svg" class="img-responsive" alt="HumanWisdom">
               </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-5 p0 center_flex">
@@ -40,7 +40,7 @@
                 <!-- /alert & bookmark -->
 
                 <!-- hamburger -->
-                <div class="col-md-4 col-sm-4 col-xs-4 p0 mr-35px center_flex" (click)="getevent()">
+                <div class="col-md-4 col-sm-4 col-xs-4 p0 mr5px center_flex" (click)="getevent()">
                   <nav>
                     <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
                     <label class="m-menu__toggle m0px flex_ai" for="menu">                    
@@ -52,11 +52,11 @@
                       <div class="m-menu__header">
                         <div class="row">
                           <div class="col-md-12 col-sm-12 col-xs-12 flex_ai">
-                            <div class="col-md-3 col-sm-4 col-xs-4 p0">
-                              <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user/profile_01_d.svg" alt="" class="img-responsive">
+                            <div class="col-md-3 col-sm-3 col-xs-3 p0">
+                              <img src="{{url === '' || url === undefined ? 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/user/profile_default.svg'  : 'https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/images/tiles/UsersAvatar/' + url}}" alt="" class="img-responsive img_profile">
                               <!-- <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/footer/dashboard/profile_active.svg" alt="" class="img-responsive w100"> -->
                             </div>
-                            <div class="col-md-9 col-sm-8 col-xs-8 ws_nowrap">
+                            <div class="col-md-9 col-sm-9 col-xs-9 ws_nowrap">
                               <h4 class="txt187 mtb0px">
                                 {{name}}
                               </h4>
@@ -68,7 +68,7 @@
                         </div>
                       </div>
                       <ul class="dh_ul">
-                        <li>
+                        <!-- <li>
                           <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
                               <div class="col-md-2 col-sm-2 col-xs-2">
@@ -77,14 +77,11 @@
                               <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                 <h4 class="txt188 mtb0px">
                                   Get a Wisdom Coach
-                                  <span class="fs_12px">
-                                    (Coming Soon)
-                                  </span>
                                 </h4>
                               </div>
                             </div>
                           </div>
-                        </li>
+                        </li> -->
                 
                         <li *ngIf="isloggedIn">
                           <div class="row">
@@ -95,9 +92,9 @@
                               <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                 <h4 class="txt188 mtb0px">
                                   My Progress
-                                  <span class="fs_12px">
+                                  <!-- <span class="fs_12px">
                                     (Coming Soon)
-                                  </span>
+                                  </span> -->
                                 </h4>
                               </div>
                             </div>
@@ -121,14 +118,14 @@
                           </a>
                         </li>
                 
-                        <li *ngIf="isloggedIn">
+                        <li *ngIf="isloggedIn && roleid === 8">
                           <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
+                              <!-- 
                               <div class="col-md-2 col-sm-2 col-xs-2">
                                 <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/dhamburger/04.svg" alt="" class="img-responsive">
                               </div>
-
-                              <!-- <div class="col-md-10 col-sm-10 col-xs-10 p0 flex_ai" *ngIf="roleid !== 8">
+                              <div class="col-md-10 col-sm-10 col-xs-10 p0 flex_ai" *ngIf="roleid !== 8">
                                 <h4 class="txt188 mtb0px mw75p">
                                   Redeem Wisdom Points
                                   <span class="fs_12px">
@@ -141,8 +138,12 @@
                                     9999
                                   </h6>
                                 </div>
-                              </div> -->
-                              <div class="col-md-10 col-sm-10 col-xs-10 p0" *ngIf="roleid === 8">
+                              </div> 
+                              -->
+                              <div class="col-md-2 col-sm-2 col-xs-2">
+                                <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/dhamburger/04.svg" alt="" class="img-responsive">
+                              </div>
+                              <div class="col-md-10 col-sm-10 col-xs-10 p0" >
                                 <h4 class="txt188 mtb0px" (click)="routeAffiliate()">
                                   Affiliate Revenue Report
                                 </h4>
@@ -219,7 +220,7 @@
                           </a>
                         </li>
                 
-                        <li>
+                        <!-- <li>
                           <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
                               <div class="col-md-2 col-sm-2 col-xs-2">
@@ -228,17 +229,15 @@
                               <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                 <h4 class="txt188 mtb0px">
                                   Become a Coach
-                                  <span class="fs_12px">
-                                    (Coming Soon)
-                                  </span>
                                 </h4>
                               </div>
                             </div>
                           </div>
-                        </li>
+                        </li> -->
                 
                         <li>
-                          <a href="https://www.humanenquiry.org/aboutBook.php" class="p0 b0px">
+                          <!-- <a href="https://www.humanenquiry.org/aboutBook.php" class="p0 b0px"> -->
+                          <a routerLink="/adults/framework-v1/hwp-project" class="p0 b0px">
                             <div class="row">
                               <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
                                 <div class="col-md-2 col-sm-2 col-xs-2">
@@ -402,6 +401,23 @@
                                       <div class="col-md-10 col-sm-10 col-xs-10 p0">
                                         <h4 class="txt188 mtb0px">
                                           Terms & Conditions
+                                        </h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a routerLink="/adults/framework-v1/privacy-policy" class="p0 b0px">
+                                  <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 p0 flex_ai">
+                                      <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/dhamburger/13.svg" alt="" class="img-responsive">
+                                      </div>
+                                      <div class="col-md-10 col-sm-10 col-xs-10 p0">
+                                        <h4 class="txt188 mtb0px">
+                                          Privacy Policy
                                         </h4>
                                       </div>
                                     </div>

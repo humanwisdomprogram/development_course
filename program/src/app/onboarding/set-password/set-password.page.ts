@@ -58,8 +58,9 @@ export class SetPasswordPage implements OnInit {
               
                this.successPassword=1
                sessionStorage.setItem("successPassword",JSON.stringify(this.successPassword))
-               this.router.navigate(["/onboarding/login", '']);
-    
+               this.router.navigate(["/onboarding/login"]);
+               window.alert('Password successfully Set')
+
             }
              
     

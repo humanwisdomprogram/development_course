@@ -42,8 +42,9 @@ export class AffiliateAllUsersComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.getUserByID(24);
-		this.getAffliateCommision();
+		this.id = this.route.snapshot.paramMap.get('id');
+		//this.getUserByID(this.id);
+		this.getAffliateCommision(this.id);
 	}
 
 
@@ -57,22 +58,42 @@ export class AffiliateAllUsersComponent implements OnInit {
     });
   }
 
-  getAffliateCommision() {
+  getAffliateCommision(id) {
+  	if(id == 0){
 			this._userservice.getAffliateCommision().subscribe((res: any) => {
-			this.affiliates = res;
-			this.getAffliateCommisionApiRes = res;
-			this.affiliates.map((element) => {
-				element.isChecked = false;
-				if(element.CommisionPaid == 0){
-					this.allCheck = 1;
-				}
-				this.SubscrAmountTotal = this.SubscrAmountTotal + parseFloat(element.Amount);
-				this.CommEarnedTotal = this.CommEarnedTotal + parseFloat(element.CommisionEarned);
+				this.affiliates = res;
+				this.getAffliateCommisionApiRes = res;
+				this.affiliates.map((element) => {
+					element.isChecked = false;
+					if(element.CommisionPaid == 0){
+						this.allCheck = 1;
+					}
+					this.SubscrAmountTotal = this.SubscrAmountTotal + parseFloat(element.Amount);
+					this.CommEarnedTotal = this.CommEarnedTotal + parseFloat(element.CommisionEarned);
 
-			});
-		}, (err: any) => {
-			console.log(err);
-		})
+				});
+			}, (err: any) => {
+				console.log(err);
+			})
+		}else{
+			this._userservice.getAffliateCommisionById(id).subscribe((res: any) => {
+				this.affiliates = res;
+				this.getAffliateCommisionApiRes = res;
+				this.affiliates.map((element) => {
+					element.isChecked = false;
+					if(element.CommisionPaid == 0){
+						this.allCheck = 1;
+					}
+					this.SubscrAmountTotal = this.SubscrAmountTotal + parseFloat(element.Amount);
+					this.CommEarnedTotal = this.CommEarnedTotal + parseFloat(element.CommisionEarned);
+
+				});
+			}, (err: any) => {
+				console.log(err);
+			})
+		}
+
+
 	}
 
 

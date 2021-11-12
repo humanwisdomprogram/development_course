@@ -12,9 +12,10 @@ import { Number } from './interfaces/number'
   providedIn: 'root'
 })
 export class UsersService {
-  // path="http://18.132.47.231/api";
-  path="https://www.humanwisdom.info/api"
-  //path = "http://ec2-18-132-47-231.eu-west-2.compute.amazonaws.com:88/api"
+// path="http://18.132.47.231/api";
+path="https://www.humanwisdom.info/api"
+// path="http://ec2-18-132-47-231.eu-west-2.compute.amazonaws.com:88/api"
+// path="https://staging.humanwisdom.info/api"
 
   constructor(
     private http: HttpClient,
@@ -310,6 +311,10 @@ export class UsersService {
 
   getAffliateCommision(){
     return this.http.get(this.path + `/GetAffliateCommision_Admin`)
+  }
+
+  getAffliateCommisionById(id){
+    return this.http.get(this.path + `/GetAffliateCommision/${id}`)
   }
 
   setAffliateCommision(Id:any): Observable<any> {
