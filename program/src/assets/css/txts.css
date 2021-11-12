@@ -1681,3 +1681,15 @@
     text-align: center;
     color: #FFFFFF;
 }
+
+.txt211 
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #1092A7;
+}

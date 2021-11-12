@@ -46,28 +46,55 @@
 </nav> -->
 
 <!-- header -->
-<app-toc-topnav></app-toc-topnav>
+<app-tn-hwp-project></app-tn-hwp-project>
 <!-- /header -->
 
 <!-- page content -->
-<div class="right_col bg_grey mh100vh" role="main" >				
+<div class="right_col pt_rightcol bg_grey" role="main" >				
   <!-- Class -->  
-  <div class="cw100p dabsolute_06">
+  <div class="cw100p">
     <div class="row center_flex">
-      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 h100p ">
-        <div class="x_panel xpanel_01 plr5pxi">                        
-          <div class="x_content">
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel p0">                        
+          <div class="x_content p0">
             <form>
-              
+
               <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 p0">
+                  <h4 class="txt211">
+                    <img src="https://humanwisdoms3.s3.eu-west-2.amazonaws.com/assets/svgs/icons/arrow_left.svg" class="img-responsive" alt="">
+                    <span class="ml10px">
+                      Continue Shopping
+                    </span>
+                  </h4>
+                </div>
+              </div>
+              
+              <!-- <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 p0 pt3px">
                   <h4 class="ob_txt1">
                     Cart
                   </h4>  
                   <hr class="chr">  
                 </div>
+              </div> -->
+              <div class="row flex_ai">
+                <div class="col-md-6 col-sm-6 col-xs-6 p0">
+                  <h4 class="ob_txt1">
+                    Cart
+                  </h4>  
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 tright p0">
+                  <a href="#" class="acurrency">
+                    Currency
+                  </a>
+                  <button class="btn btn-default btn_inr" type="button">
+                    {{defaultCurrencySymbol}}
+                   </button>
+                </div>
               </div>
 
+              <hr class="dhr">
               
               <div *ngFor="let c of cartList" class="row cpt10px">
                 <div class="row center_flex">
@@ -272,8 +299,7 @@
                 </div>                
               </div>
               
-              <br>
-              <br>
+              <div class="pagebreak"></div>
           
             </form>
           </div>

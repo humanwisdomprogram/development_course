@@ -19761,7 +19761,7 @@ input{
 
 .pagebreak 
 {
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
 }
 
 .btn_plus_1
@@ -21360,7 +21360,8 @@ input[type="search"]:focus::-webkit-search-cancel-button
   height: 70px;
   display: flex;
   align-items: center; 
-  height: 36px;
+  min-height: 36px;
+  max-height: 55px;
   width: 70%;
   position: absolute;
   top: -8%;
@@ -21444,7 +21445,7 @@ input[type="search"]:focus::-webkit-search-cancel-button
 #jdqcarousel .carousel-control.left, 
 #jdqcarousel .carousel-control.right
 {
-  display: none;
+  /* display: none; */
 }
 
 #jdqcarousel .carousel-control .fa-chevron-right,
@@ -21495,7 +21496,8 @@ input[type="search"]:focus::-webkit-search-cancel-button
   /* height: auto; */
   height: 315px;
   padding: 20px 10px;
-  width: 100%;
+  /* width: 100%; */
+  width: 90%;
 }
 
 @media (min-width: 768px)
@@ -23066,4 +23068,9 @@ ul.dh_ul li
 {
   height: 12rem;
   width: 12rem;
+}
+
+.ml10px 
+{
+  margin-left: 10px;
 }

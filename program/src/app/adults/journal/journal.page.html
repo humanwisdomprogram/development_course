@@ -66,7 +66,7 @@
                         <li data-target="#jdqcarousel" data-slide-to="2" class=""></li>
                         <li data-target="#jdqcarousel" data-slide-to="3" class=""></li> -->
                       </ol>
-                      <div class="carousel-inner" role="listbox">          
+                      <div class="carousel-inner center_flex" role="listbox">          
                         <div [ngClass]="[(i === 0) ? 'item active' : 'item']" *ngFor="let item of d; let i = index" (click)="goToNote(d[i].QueId,d[i].Qtn,d[i].Ans,'dq')">                            
                           <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
