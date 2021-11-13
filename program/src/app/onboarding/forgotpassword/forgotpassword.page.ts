@@ -43,13 +43,13 @@ export class ForgotpasswordPage implements OnInit {
           {
             console.log(resp)
            
-            if(resp.toLocaleLowerCase().match('your password has been reset.'))
+            if(resp.toLocaleLowerCase().match("Your password has been reset. "))
             {
             
               
                this.successPassword=1
                sessionStorage.setItem("successPassword",JSON.stringify(this.successPassword))
-               this.router.navigate(["/onboarding/login", '']);
+               this.router.navigate(["/onboarding/login"]);
     
             }
              
