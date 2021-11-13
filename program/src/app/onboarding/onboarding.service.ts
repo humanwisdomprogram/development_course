@@ -58,6 +58,10 @@ export class OnboardingService {
     return this.http.post(this.path+'/forgotPassword',data)
   }
 
+  setPassword(data:any):Observable<any>{
+    return this.http.post(this.path+'/SetPassword',data)
+  }
+
   addItem(data:any):Observable<any>{
     return this.http.post(this.path+'/Addcart',data)
   }

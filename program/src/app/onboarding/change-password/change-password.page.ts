@@ -50,9 +50,10 @@ export class ChangePasswordPage implements OnInit {
       }
     }
     else{
+      let userId = JSON.parse(localStorage.getItem("userId"))
       let email = localStorage.getItem("email")
-      this.service.forgotPassword({
-        "Email": this.urlEmail ?? email,
+      this.service.setPassword({
+        "UserID": userId,
         "Pwd":this.password})
         .subscribe(
           resp=>
@@ -65,7 +66,6 @@ export class ChangePasswordPage implements OnInit {
               localStorage.setItem('pswd', this.password)
               if(roleid === 8 && emailcode === 'T') {
                 localStorage.setItem("emailCode", 'F');
-                let userId = JSON.parse(localStorage.getItem("userId"))
                 window.location.href = `https://humanwisdom.me/Admin/#/frameworks/affiliate-s01-a/${userId}`;
               }else {
                 this.successPassword=1
@@ -74,7 +74,7 @@ export class ChangePasswordPage implements OnInit {
                 this.router.navigate(["/onboarding/login"]);
               }
               
-              
+              window.alert('Your password has been reset.')
     
             }
              
