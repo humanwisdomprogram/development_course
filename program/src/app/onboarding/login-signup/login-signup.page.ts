@@ -291,10 +291,7 @@ export class LoginSignupPage implements OnInit {
                 }
 
 
-                if((this.loginResponse?.Subscriber==0))
-                {
-                  this.enablemodal.nativeElement.click();
-                }else {
+               
                   let acceptCookie = localStorage.getItem('activeCode');
                   let subscribePage = localStorage.getItem('subscribepage');
                   if(acceptCookie === 'T' || subscribePage === 'T'){
@@ -310,7 +307,7 @@ export class LoginSignupPage implements OnInit {
                     localStorage.setItem("isloggedin", 'T')
                     this.router.navigate(['/adults/adult-dashboard'])
                   }
-                }
+                
             
                 /* if(this.urlEmail)
                   {
@@ -413,10 +410,7 @@ export class LoginSignupPage implements OnInit {
   
                   }
   
-                  if((this.loginResponse?.Subscriber==0))
-                  {
-                    this.enablemodal.nativeElement.click();
-                  }else {
+                  
                     let acceptCookie = localStorage.getItem('activeCode');
                     let subscribePage = localStorage.getItem('subscribepage');
                     if(acceptCookie === 'T' || subscribePage === 'T'){
@@ -432,7 +426,7 @@ export class LoginSignupPage implements OnInit {
                       localStorage.setItem("isloggedin", 'T')
                       this.router.navigate(['/adults/adult-dashboard'])
                     }
-                  }
+                  
               
                   /* if(this.urlEmail)
                     {
@@ -521,9 +515,7 @@ export class LoginSignupPage implements OnInit {
 
           let roleid = JSON.parse(localStorage.getItem('RoleID'));
                   let emailcode = localStorage.getItem("emailCode");
-            if ((this.loginResponse?.Subscriber == 0 && roleid !== 8)) {
-              this.enablemodal.nativeElement.click();
-            } else {
+            
               let acceptCookie = localStorage.getItem('activeCode');
               let subscribePage = localStorage.getItem('subscribepage');
               if (acceptCookie === 'T' || subscribePage === 'T') {
@@ -558,7 +550,7 @@ export class LoginSignupPage implements OnInit {
                   }else {
                     this.router.navigate(['/adults/adult-dashboard'])
                   }
-                }
+                
               }
             }
               
